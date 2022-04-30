@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import Banner from '../Banner/Banner';
 
 const Header = () => {
     return (
@@ -24,7 +23,6 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Banner></Banner>
         </div>
     );
 };
