@@ -9,7 +9,7 @@ const Inventory = () => {
     const [equipments] = useEquipment();
 
     return (
-        <div>
+        <div id='items'>
             <h2 className='text-center my-3'>Inventory items</h2>
             <div className='row'>
                 {

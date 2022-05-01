@@ -18,9 +18,8 @@ const EquipmentDetail = () => {
     useEffect(() => {
         const getDetail = async () => {
             try {
-                const res = await axios.get(
-                    `http://localhost:5000/equipment/${id}`,
-                )
+                const url = `http://localhost:5000/equipment/${id}`
+                const res = await axios.get(url)
                 setDetail(res?.data)
                 setQuantityData(res?.data?.quantity)
             } catch (err) {
@@ -31,7 +30,10 @@ const EquipmentDetail = () => {
     }, [id]);
 
     const handleDelivered = () => {
-        let newQuantity = quantityData - 1;
+        if (quantityData === 0) {
+            return
+        }
+        const newQuantity = quantityData - 1;
         const updatedQuantity = { quantity: newQuantity };
 
         //send data to server to update
