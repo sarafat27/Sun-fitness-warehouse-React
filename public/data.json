@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Bench-press-machine",
+        "price": 5000,
+        "img": "https://www.yanrefitness.com/wp-content/uploads/2021/07/Figure-1_-Hydraulic-Bench-Press-Machine.jpg",
+        "description": "This is incline bench press machine.It is used to train the upper chest of our body.We can supply the bench press machines which are very risk free.",
+        "quantity": "15",
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    },
+    {
+        "name": "Pull up bar",
+        "price": 3000,
+        "img": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2021%2F05%2F06%2Fsportsroyals-power-tower-dip-station-pull-up-bar.jpg",
+        "description": "This is pull up bar.It is used to train the back muscle of our body.We can supply pullup bars which are very risk free.",
+        "quantity": "510",
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    },
+    {
+        "name": "Leg press machine",
+        "price": 8000,
+        "img": "https://cdn.shopify.com/s/files/1/0564/6113/1956/products/leg-press-loaded_ba7a222f-f290-4cc1-a115-cfc684b996d3_700x700.jpg?v=1647597626",
+        "description": "This is leg press machine.It is used to train the quad muscle of our body.We can supply the leg press machines which are very risk free.",
+        "quantity": 13,
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    },
+    {
+        "name": "Dumbell",
+        "price": "300",
+        "quantity": "50",
+        "supplierName": "Manus dev",
+        "shippingCost": "200"
+    },
+    {
+        "name": "Burbell",
+        "price": "500",
+        "quantity": "30",
+        "supplierName": "Manus dev",
+        "shippingCost": "300"
+    },
+    {
+        "name": "lat pull down machine",
+        "price": "5000",
+        "quantity": "30",
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    },
+    {
+        "name": "Treadmill",
+        "price": "20000",
+        "quantity": "10",
+        "supplierName": "Manus dev",
+        "shippingCost": "1000"
+    },
+    {
+        "name": "Cycling Machine",
+        "price": "3000",
+        "quantity": "10",
+        "supplierName": "Manus dev",
+        "shippingCost": "200"
+    },
+    {
+        "name": "squat bar",
+        "price": "10000",
+        "quantity": "10",
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    },
+    {
+        "name": "leg extension machine",
+        "price": "4000",
+        "quantity": "30",
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    },
+    {
+        "name": "Sit up bench",
+        "price": "300",
+        "quantity": "30",
+        "supplierName": "Manus dev",
+        "shippingCost": "100"
+    },
+    {
+        "name": "Cable row machine",
+        "price": "4000",
+        "quantity": "30",
+        "supplierName": "Manus dev",
+        "shippingCost": "500"
+    }
+]
