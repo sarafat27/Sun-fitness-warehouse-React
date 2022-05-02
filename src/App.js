@@ -9,6 +9,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import AddItem from './Pages/AddItem/AddItem';
 import Login from './Pages/Authentication/Login/Login';
 import Register from './Pages/Authentication/Register/Register';
+import NotFound from './Pages/shared/NotFound/NotFound';
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
         <Route path='/addItem' element={<AddItem></AddItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

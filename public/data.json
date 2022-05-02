@@ -29,6 +29,8 @@
     {
         "name": "Dumbell",
         "price": "300",
+        "img": "https://m.media-amazon.com/images/I/318ngnapSUL.jpg",
+        "description": "This is a set of dumbell.It is used to train the bicep & chest of our body.We can supply dumbells which are very handy and comfy.",
         "quantity": "50",
         "supplierName": "Manus dev",
         "shippingCost": "200"
@@ -36,6 +38,8 @@
     {
         "name": "Burbell",
         "price": "500",
+        "img": "https://image.shutterstock.com/image-illustration/black-burbell-260nw-126791759.jpg",
+        "description": "This is burbell.It is used to train chest,back,bicep of our body.We can supply burbells which are very risk free.",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "300"
@@ -43,6 +47,8 @@
     {
         "name": "lat pull down machine",
         "price": "5000",
+        "img": "https://5.imimg.com/data5/QG/SP/MY-37112304/lat-pulldown-machine-500x500.jpg",
+        "description": "This is lat pull down machine.It is used to train the back muscle of our body.We can supply this machine which are very risk free.",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "500"
@@ -50,6 +56,7 @@
     {
         "name": "Treadmill",
         "price": "20000",
+        "img": "https://contents.mediadecathlon.com/p1876548/k$f9f1652a3eb40406a0546ae28a9b0337/t900c-treadmill.jpg?&f=800x800",
         "quantity": "10",
         "supplierName": "Manus dev",
         "shippingCost": "1000"
@@ -57,6 +64,7 @@
     {
         "name": "Cycling Machine",
         "price": "3000",
+        "img": "https://image.made-in-china.com/2f0j00bViYEoNPgGqv/Cycling-Machine-Exercise-Bicycle-Spinning-Magnetic-Bike-Professional-Body-Fit-Building-Commercial-Indoor-Mini-Home-Gym-Fitness-Euipment.jpg",
         "quantity": "10",
         "supplierName": "Manus dev",
         "shippingCost": "200"
@@ -64,6 +72,7 @@
     {
         "name": "squat bar",
         "price": "10000",
+        "img": "https://www.bellsofsteel.com/wp-content/uploads/2019/10/ss3-11.jpg",
         "quantity": "10",
         "supplierName": "Manus dev",
         "shippingCost": "500"
@@ -71,6 +80,7 @@
     {
         "name": "leg extension machine",
         "price": "4000",
+        "img": "https://truefitness.com/wp-content/uploads/2019/11/SPL0100-Acrylic-Alabaster-Left_960-2.png",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "500"
@@ -78,6 +88,7 @@
     {
         "name": "Sit up bench",
         "price": "300",
+        "img": "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFHMlkwQjR4ZkwuX0FDX1NMMTUwMF8uanBn.jpg",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "100"
@@ -85,6 +96,7 @@
     {
         "name": "Cable row machine",
         "price": "4000",
+        "img": "https://5.imimg.com/data5/FT/CP/EX/SELLER-38017335/seated-cable-row-machine-500x500.jpg",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "500"

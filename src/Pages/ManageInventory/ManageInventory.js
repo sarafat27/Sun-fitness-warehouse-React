@@ -4,6 +4,7 @@ import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useEquipment from '../../hooks/useEquipment';
+import './ManageInventory.css';
 
 const ManageInventory = () => {
     const [equipments, setEquipments] = useEquipment();
@@ -28,11 +29,11 @@ const ManageInventory = () => {
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
-                        <th style={{ width: '20%' }}>Name</th>
-                        <th style={{ width: '20%' }}>Price</th>
-                        <th style={{ width: '20%' }}>Quantity</th>
-                        <th style={{ width: '20%' }}>Shipping cost</th>
-                        <th style={{ width: '20%' }}>Delete</th>
+                        <th>Name and picture</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Shipping cost</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
             </Table>
@@ -41,11 +42,13 @@ const ManageInventory = () => {
                     equipments.map(equipment => <Table key={equipment._id} striped bordered hover variant="dark">
                         <tbody>
                             <tr>
-                                <td style={{ width: '20%' }}>{equipment.name}</td>
-                                <td style={{ width: '20%' }}>{equipment.price}</td>
-                                <td style={{ width: '20%' }}>{equipment.quantity}</td>
-                                <td style={{ width: '20%' }}>{equipment.shippingCost}</td>
-                                <td onClick={() => handleDelete(equipment._id)} style={{ width: '20%' }}>
+                                <td><span>{equipment.name}</span>
+                                    <img className='img' src={equipment.img} alt="" />
+                                </td>
+                                <td>{equipment.price}</td>
+                                <td>{equipment.quantity}</td>
+                                <td>{equipment.shippingCost}</td>
+                                <td onClick={() => handleDelete(equipment._id)} >
                                     <FontAwesomeIcon className='text-danger' icon={faTrash}></FontAwesomeIcon>
                                 </td>
                             </tr>
@@ -53,7 +56,7 @@ const ManageInventory = () => {
                     </Table>)
                 }
             </div>
-            <Button as={Link} to='/addItem' variant="success w-25 d-block mx-auto">Add new item</Button>
+            <Button as={Link} to='/addItem' variant="success w-25 d-block mx-auto my-4">Add new item</Button>
         </div>
     );
 };

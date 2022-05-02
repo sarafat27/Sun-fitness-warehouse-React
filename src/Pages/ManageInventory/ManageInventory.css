@@ -1,0 +1,11 @@
+th,
+td {
+    width: 20%;
+}
+
+.img {
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 20px;
+}

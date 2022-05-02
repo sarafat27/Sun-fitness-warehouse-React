@@ -11,9 +11,9 @@ const Inventory = () => {
     return (
         <div id='items'>
             <h2 className='text-center my-3'>Inventory items</h2>
-            <div className='row'>
+            <div className='row mx-3'>
                 {
-                    equipments.slice(0, 3).map(equipment => <CardBox
+                    equipments.slice(0, 6).map(equipment => <CardBox
                         key={equipment._id}
                         equipment={equipment}
                     ></CardBox>)

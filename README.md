@@ -1,8 +1,17 @@
-# Getting Started with Create React App
+# Sun fitness warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My website live link: [Click here](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
+This is an website of warehouse where the details of the equipments will be shown.Any person of warehouse can log  into this website and they can add,delete ,update the items.Without login they can see the home page but cannot update anything.
+
+## Features & functionality
+* There is a navbar in top which indicates the navigation.
+* Database and server is created and connected with this website.
+* Authentication system is fully implemented in this website.
+* Jwt will be passed when a user get logged in.
+* This website is fully responsive for mobile and computer. 
+* In the manage inventory page,delete and add item option is created.
 
 In the project directory, you can run:
 

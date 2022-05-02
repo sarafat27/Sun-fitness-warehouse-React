@@ -10,9 +10,9 @@ const CardBox = ({ equipment }) => {
         navigate(`/inventory/${_id}`);
     }
     return (
-        <div className='col-lg-4'>
+        <div className='col-lg-4 mb-4 col-md-6'>
             <CardGroup>
-                <Card style={{ height: '600px' }}>
+                <Card className='border border-dark' style={{ height: '600px' }}>
                     <Card.Img className='mx-auto' style={{ height: '420px', width: '300px' }} variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>

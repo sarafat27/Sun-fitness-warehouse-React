@@ -7,7 +7,8 @@ const AddItem = () => {
         const price = event.target.price.value;
         const quantity = event.target.quantity.value;
         const shippingCost = event.target.shipping.value;
-        const newEquipment = { name, price, quantity, shippingCost }
+        const img = event.target.image.value;
+        const newEquipment = { name, price, img, quantity, shippingCost }
 
         //send data to the server
         fetch('http://localhost:5000/equipment', {
@@ -29,6 +30,7 @@ const AddItem = () => {
             <form onSubmit={handleAddItems} className='form'>
                 <input placeholder='equipment name' type="text" name='name' required />
                 <input placeholder='price' type="text" name="price" id="" required />
+                <input placeholder='image' type="text" name="image" id="" required />
                 <input placeholder='quantity' type="text" name="quantity" id="" required />
                 <input placeholder='shipping cost' type="text" name="shipping" id="" required />
                 <input className='btn btn-dark' type="submit" value="Add item" />
