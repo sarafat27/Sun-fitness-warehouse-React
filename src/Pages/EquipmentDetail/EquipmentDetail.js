@@ -12,7 +12,7 @@ const EquipmentDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                setDetail(data)
+                setDetail(data);
             })
     }, []);
 

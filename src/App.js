@@ -6,6 +6,9 @@ import Home from './Pages/Home/Home/Home';
 import EquipmentDetail from './Pages/EquipmentDetail/EquipmentDetail';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import Blogs from './Pages/Blogs/Blogs';
+import AddItem from './Pages/AddItem/AddItem';
+import Login from './Pages/Authentication/Login/Login';
+import Register from './Pages/Authentication/Register/Register';
 function App() {
   return (
     <div>
@@ -16,6 +19,9 @@ function App() {
         <Route path='/inventory/:id' element={<EquipmentDetail></EquipmentDetail>}></Route>
         <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
     </div>
   );
