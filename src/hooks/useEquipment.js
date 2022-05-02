@@ -8,6 +8,6 @@ const useEquipment = () => {
             .then(res => res.json())
             .then(data => setEquipments(data))
     }, []);
-    return [equipments];
+    return [equipments, setEquipments];
 }
 export default useEquipment;
