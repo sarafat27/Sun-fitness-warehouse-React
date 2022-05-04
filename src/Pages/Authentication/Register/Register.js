@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../shared/Loading/Loading';
 
 const Register = () => {
     const nameRef = useRef('');
@@ -19,6 +20,15 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>{error?.message}</p>
+    }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     const handleSubmit = event => {
         event.preventDefault();
         const name = nameRef.current.value;
@@ -31,10 +41,9 @@ const Register = () => {
         }
         else {
             createUserWithEmailAndPassword(email, password);
-            navigate('/home')
+            // navigate('/home')
         }
     }
-
 
     return (
         <div style={{ width: '35vw' }} className='mx-auto border border-dark mt-3 px-5 py-3 rounded'>
@@ -52,6 +61,7 @@ const Register = () => {
                 <Form.Group className="mb-4" controlId="formBasicConfirmPassword">
                     <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
+                {errorElement}
                 <Button variant="dark w-100 rounded-pill" type="submit">
                     SignUp
                 </Button>

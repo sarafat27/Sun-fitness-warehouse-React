@@ -42,7 +42,7 @@ const ManageInventory = () => {
                     equipments.map(equipment => <Table key={equipment._id} striped bordered hover variant="dark">
                         <tbody>
                             <tr>
-                                <td><span>{equipment.name}</span>
+                                <td>{equipment.name}
                                     <img className='img' src={equipment.img} alt="" />
                                 </td>
                                 <td>{equipment.price}</td>

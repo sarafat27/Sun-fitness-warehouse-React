@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../shared/Loading/Loading';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -17,12 +20,39 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(
+        auth
+    );
+
+    let errorElement;
+    if (error || error2) {
+        errorElement = <p className='text-danger'>{error?.message} {error2?.message}</p>
+    }
+
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+
+    if (user) {
+        navigate('/home');
+    }
+
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
-        navigate('/home')
+    }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('email sent')
+        }
+        else {
+            toast('please give an email address');
+        }
     }
 
     return (
@@ -35,12 +65,13 @@ const Login = () => {
                 <Form.Group className="mb-4" controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
+                {errorElement}
                 <Button variant="dark w-100 rounded-pill" type="submit">
                     Login
                 </Button>
                 <p className='my-3'>New to This website? <Link className='text-decoration-none' to='/register'>please register</Link></p>
             </Form>
-            <p>Forget password? <button className='btn btn-link text-decoration-none text-success'>
+            <p>Forget password? <button onClick={resetPassword} className='btn btn-link text-decoration-none text-success'>
                 Reset password
             </button></p>
             <SocialLogin></SocialLogin>
