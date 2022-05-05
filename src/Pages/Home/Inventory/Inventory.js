@@ -10,8 +10,8 @@ const Inventory = () => {
 
     return (
         <div id='items'>
-            <h2 className='text-center my-3'>Inventory items</h2>
-            <div className='row mx-3'>
+            <h2 className='text-center my-5 text-success'>Inventory items</h2>
+            <div className='row mx-5'>
                 {
                     equipments.slice(0, 6).map(equipment => <CardBox
                         key={equipment._id}
@@ -19,7 +19,7 @@ const Inventory = () => {
                     ></CardBox>)
                 }
             </div>
-            <Button as={Link} to='/manageInventory' variant='dark w-50 d-block mx-auto my-5'>Manage inventory</Button>
+            <Button as={Link} to='/manageInventory' variant='success w-50 d-block mx-auto my-5'>Manage inventory</Button>
         </div>
     );
 };

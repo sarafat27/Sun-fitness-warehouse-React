@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, CardGroup } from 'react-bootstrap';
+import { Button, Card, CardGroup, Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 
 const EquipmentDetail = () => {
@@ -63,32 +63,39 @@ const EquipmentDetail = () => {
     }
 
     return (
-        <div className='row '>
-            <div className='col-lg-4 mt-5'>
-                <CardGroup>
-                    <Card style={{ height: '600px' }}>
-                        <Card.Img className='mx-auto' style={{ height: '420px', width: '300px' }} variant="top" src={img} />
-                        <Card.Body>
-                            <Card.Title>{name}</Card.Title>
-                            <Card.Text>price: {price}</Card.Text>
-                            <Card.Text>ShippingCost: {shippingCost}</Card.Text>
-                            <Card.Text>
-                                {description}
-                            </Card.Text>
-                            <Card.Text>Quantity: {quantity}</Card.Text>
-                            <Card.Text>Supplier name: {supplierName}</Card.Text>
-                        </Card.Body>
-                        <Button onClick={handleDelivered} variant="dark">Delivered</Button>
-                    </Card>
-                </CardGroup>
+        <div>
+            <div className='row w-100'>
+                <div className='col-lg-4 col-md-6 col-sm-10 mt-5 mx-auto'>
+                    <CardGroup>
+                        <Card className='shadow-lg mx-3' style={{ height: '600px', borderRadius: '10px' }}>
+                            <Card.Img className='mx-auto shadow-lg' style={{ height: '420px', width: '300px', borderRadius: '10px' }} variant="top" src={img} />
+                            <Card.Body>
+                                <Card.Title>{name}</Card.Title>
+                                <Card.Text>price: {price}</Card.Text>
+                                <Card.Text>ShippingCost: {shippingCost}</Card.Text>
+                                <Card.Text>
+                                    {description}
+                                </Card.Text>
+                                <Card.Text>Quantity: {quantity}</Card.Text>
+                                <Card.Text>Supplier name: {supplierName}</Card.Text>
+                            </Card.Body>
+                            <Button onClick={handleDelivered} variant="success">Delivered</Button>
+                        </Card>
+                    </CardGroup>
+                </div>
+                <div style={{ height: '250px' }} className='col-lg-4 col-md-6 col-sm-10 w-25 mx-auto border border-dark my-auto px-4 rounded'>
+                    <Form onSubmit={handleRestock} className='my-5'>
+                        <h4 className='text-center'>Restock the items</h4>
+                        <Form.Group className="mb-4" controlId="formBasicEmail">
+                            <Form.Control type="text" name='number' required />
+                        </Form.Group>
+                        <Button variant="dark w-100 rounded-pill" type="submit">
+                            Restock
+                        </Button>
+                    </Form>
+                </div>
             </div>
-            <form onSubmit={handleRestock} className='col-lg-4'>
-                <h4>Restock the items</h4>
-                <input className='w-75' name='number' type="number" />
-                <br />
-                <input className='w-75 mt-3' type="submit" value="Restock" />
-            </form>
-            <Button as={Link} to='/manageInventory' variant='dark w-50 d-block mx-auto my-5'>Manage inventory</Button>
+            <Button as={Link} to='/manageInventory' variant='success w-50 d-block mx-auto my-5'>Manage inventory</Button>
         </div>
     );
 };

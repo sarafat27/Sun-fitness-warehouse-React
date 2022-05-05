@@ -1,5 +1,7 @@
 import React from 'react';
-import './AddItem.css'
+import { Button, Form } from 'react-bootstrap';
+import { toast } from 'react-toastify';
+
 const AddItem = () => {
     const handleAddItems = event => {
         event.preventDefault();
@@ -20,21 +22,33 @@ const AddItem = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Equipment succesfully added');
+                toast('Equipment succesfully added');
                 event.target.reset();
             })
     }
     return (
-        <div>
-            <h2 className='text-center mb-4'>Please add items</h2>
-            <form onSubmit={handleAddItems} className='form'>
-                <input placeholder='equipment name' type="text" name='name' required />
-                <input placeholder='price' type="text" name="price" id="" required />
-                <input placeholder='image' type="text" name="image" id="" required />
-                <input placeholder='quantity' type="text" name="quantity" id="" required />
-                <input placeholder='shipping cost' type="text" name="shipping" id="" required />
-                <input className='btn btn-dark' type="submit" value="Add item" />
-            </form>
+        <div style={{ width: '30vw' }} className=' mx-auto border border-dark mt-3 px-4 py-3 rounded'>
+            <h2 className='text-center my-3'>Please add items</h2>
+            <Form onSubmit={handleAddItems} className='form'>
+                <Form.Group className="mb-4" controlId="formBasicName">
+                    <Form.Control type="text" placeholder="equipment name" name='name' required />
+                </Form.Group>
+                <Form.Group className="mb-4" controlId="formBasicPrice">
+                    <Form.Control type="text" placeholder="Price" name='price' required />
+                </Form.Group>
+                <Form.Group className="mb-4" controlId="formBasicImage">
+                    <Form.Control type="text" placeholder="image" name='image' required />
+                </Form.Group>
+                <Form.Group className="mb-4" controlId="formBasicImage">
+                    <Form.Control type="text" placeholder="quantity" name='quantity' required />
+                </Form.Group>
+                <Form.Group className="mb-4" controlId="formBasicImage">
+                    <Form.Control type="text" placeholder="shipping cost" name='shipping' required />
+                </Form.Group>
+                <Button variant="dark w-100 rounded-pill" type="submit">
+                    Add item
+                </Button>
+            </Form>
         </div>
     );
 };

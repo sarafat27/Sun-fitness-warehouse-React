@@ -57,6 +57,7 @@
         "name": "Treadmill",
         "price": "20000",
         "img": "https://contents.mediadecathlon.com/p1876548/k$f9f1652a3eb40406a0546ae28a9b0337/t900c-treadmill.jpg?&f=800x800",
+        "description": "This is Treadmill.It is used to run and keep good fitness of our body.We can supply the Treadmill machines which are very risk free.",
         "quantity": "10",
         "supplierName": "Manus dev",
         "shippingCost": "1000"
@@ -65,6 +66,7 @@
         "name": "Cycling Machine",
         "price": "3000",
         "img": "https://image.made-in-china.com/2f0j00bViYEoNPgGqv/Cycling-Machine-Exercise-Bicycle-Spinning-Magnetic-Bike-Professional-Body-Fit-Building-Commercial-Indoor-Mini-Home-Gym-Fitness-Euipment.jpg",
+        "description": "This is cycling machine.It is used to train the cardio muscle of our body.We can supply the cycling machines which are very risk free.",
         "quantity": "10",
         "supplierName": "Manus dev",
         "shippingCost": "200"
@@ -73,6 +75,7 @@
         "name": "squat bar",
         "price": "10000",
         "img": "https://www.bellsofsteel.com/wp-content/uploads/2019/10/ss3-11.jpg",
+        "description": "This is squat bar machine.It is used to train the quad muscle of our body.We can supply the squat bar machines which are very risk free.",
         "quantity": "10",
         "supplierName": "Manus dev",
         "shippingCost": "500"
@@ -81,6 +84,7 @@
         "name": "leg extension machine",
         "price": "4000",
         "img": "https://truefitness.com/wp-content/uploads/2019/11/SPL0100-Acrylic-Alabaster-Left_960-2.png",
+        "description": "This is leg extension machine.It is used to train the quad muscle of our body.We can supply the leg extension machines which are very risk free.",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "500"
@@ -89,6 +93,7 @@
         "name": "Sit up bench",
         "price": "300",
         "img": "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFHMlkwQjR4ZkwuX0FDX1NMMTUwMF8uanBn.jpg",
+        "description": "This is sit up bench.It is used to train the abdominal muscle of our body.We can supply the sit up benches which are very risk free.",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "100"
@@ -97,6 +102,7 @@
         "name": "Cable row machine",
         "price": "4000",
         "img": "https://5.imimg.com/data5/FT/CP/EX/SELLER-38017335/seated-cable-row-machine-500x500.jpg",
+        "description": "This is cable row machine.It is used to train the back muscle of our body.We can supply canle row  machine which are very risk free.",
         "quantity": "30",
         "supplierName": "Manus dev",
         "shippingCost": "500"

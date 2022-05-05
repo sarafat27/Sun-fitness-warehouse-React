@@ -7,7 +7,6 @@ import pic3 from '../../../Images/Banner/pic3.jpg'
 const Banner = () => {
     return (
         <div>
-            <h1 className='text-center my-3'>Gym equipment warehouse</h1>
             <Carousel>
                 <Carousel.Item>
                     <img style={{ height: '80vh' }}
@@ -16,8 +15,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Sun fitness warehouse</h3>
-                        <p>All types of gym equipments are stored here.</p>
+                        <h1>Sun fitness warehouse</h1>
+                        <p>All types of gym equipments are stored here.You can add and delete items from here.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -28,8 +27,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Sun fitness warehouse</h3>
-                        <p>All types of gym equipments are stored here.</p>
+                        <h1>Sun fitness warehouse</h1>
+                        <p>All types of gym equipments are stored here.You can add and delete items from here.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -40,8 +39,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Sun fitness warehouse</h3>
-                        <p>All types of gym equipments are stored here.</p>
+                        <h1>Sun fitness warehouse</h1>
+                        <p>All types of gym equipments are stored here.You can add and delete items from here.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
