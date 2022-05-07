@@ -72,10 +72,10 @@ const EquipmentDetail = () => {
     return (
         <div>
             <div className='row w-100'>
-                <div className='col-lg-4 col-md-6 col-sm-10 mt-5 mx-auto'>
+                <div className='col-lg-4 col-md-6 col-10 my-5 mx-auto'>
                     <CardGroup>
-                        <Card className='shadow-lg mx-3' style={{ height: '600px' }}>
-                            <Card.Img className='mx-auto shadow-lg' style={{ height: '420px', width: '300px' }} variant="top" src={img} />
+                        <Card className='shadow-lg mx-3'>
+                            <Card.Img className='mx-auto shadow-lg' style={{ height: '350px', width: '260px' }} variant="top" src={img} />
                             <Card.Body>
                                 <Card.Title>{name}</Card.Title>
                                 <Card.Text>price: {price}</Card.Text>
@@ -90,7 +90,7 @@ const EquipmentDetail = () => {
                         </Card>
                     </CardGroup>
                 </div>
-                <div style={{ height: '250px' }} className='col-lg-4 col-md-6 col-sm-10 w-25 mx-auto border border-dark my-auto px-4 rounded'>
+                <div className='col-lg-3 col-md-4 col-7 mx-auto border border-dark my-auto px-4 rounded'>
                     <Form onSubmit={handleRestock} className='my-5'>
                         <h4 className='text-center'>Restock the items</h4>
                         <Form.Group className="mb-4" controlId="formBasicEmail">

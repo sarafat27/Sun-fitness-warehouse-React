@@ -58,25 +58,27 @@ const Login = () => {
     }
 
     return (
-        <div style={{ width: '30vw' }} className=' mx-auto border border-dark mt-3 px-4 py-3 rounded'>
-            <h2 className='my-3 text-center'>Please Login</h2>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-4" controlId="formBasicEmail">
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                </Form.Group>
-                <Form.Group className="mb-4" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
-                {errorElement}
-                <Button variant="dark w-100 rounded-pill" type="submit">
-                    Login
-                </Button>
-                <p className='my-3'>New to This website? <Link className='text-decoration-none' to='/register'>please register</Link></p>
-            </Form>
-            <p>Forget password? <button onClick={resetPassword} className='btn btn-link text-decoration-none text-success'>
-                Reset password
-            </button></p>
-            <SocialLogin></SocialLogin>
+        <div className='row w-100'>
+            <div className='col-lg-4 col-md-6 col-9 mx-auto border border-dark mt-3 px-4 py-3 rounded'>
+                <h2 className='my-3 text-center'>Please Login</h2>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group className="mb-4" controlId="formBasicEmail">
+                        <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                    </Form.Group>
+                    <Form.Group className="mb-4" controlId="formBasicPassword">
+                        <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                    </Form.Group>
+                    {errorElement}
+                    <Button variant="dark w-100 rounded-pill" type="submit">
+                        Login
+                    </Button>
+                    <p className='my-3'>New to This website? <Link className='text-decoration-none' to='/register'>please register</Link></p>
+                </Form>
+                <p>Forget password? <button onClick={resetPassword} className='btn btn-link text-decoration-none text-success'>
+                    Reset password
+                </button></p>
+                <SocialLogin></SocialLogin>
+            </div>
         </div>
     );
 };
