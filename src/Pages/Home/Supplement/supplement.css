@@ -1,0 +1,22 @@
+.protien-img {
+    width: 30vw;
+}
+
+.protien-text {
+    width: 50vw;
+}
+
+@media screen and (max-width:880px) {
+    .protien-container {
+        flex-direction: column;
+    }
+
+    .protien-img {
+        width: 50vw;
+    }
+
+    .protien-text {
+        width: 80vw;
+    }
+
+}

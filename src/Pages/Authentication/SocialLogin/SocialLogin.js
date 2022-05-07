@@ -3,12 +3,14 @@ import { Button } from 'react-bootstrap';
 import googleLogo from '../../../Images/social login/google.png';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../shared/Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
     let errorElement;
     if (error) {
@@ -20,7 +22,7 @@ const SocialLogin = () => {
     }
 
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true })
     }
     return (
         <div>

@@ -12,8 +12,8 @@ const CardBox = ({ equipment }) => {
     return (
         <div className='col-lg-4 mb-4 col-md-6'>
             <CardGroup>
-                <Card className='shadow-lg' style={{ height: '600px', borderRadius: '10px' }}>
-                    <Card.Img className='mx-auto shadow-lg' style={{ height: '420px', width: '300px', borderRadius: '10px' }} variant="top" src={img} />
+                <Card className='shadow-lg' style={{ height: '600px' }}>
+                    <Card.Img className='mx-auto shadow-lg' style={{ height: '420px', width: '300px' }} variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>price: {price}</Card.Text>

@@ -1,4 +1,4 @@
-import { faLocation, faMailBulk, faMailForward, faMailReply, faMailReplyAll, faMapLocation, faMapLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocation, faMailForward, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import apple from '../../../Images/Footer/apple.png'

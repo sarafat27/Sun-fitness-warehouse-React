@@ -1,18 +1,24 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import axios from 'axios';
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
     const handleAddItems = event => {
         event.preventDefault();
-        const name = event.target.name.value;
-        const price = event.target.price.value;
-        const quantity = event.target.quantity.value;
-        const shippingCost = event.target.shipping.value;
-        const img = event.target.image.value;
-        const newEquipment = { name, price, img, quantity, shippingCost }
+        const newEquipment = {
+            email: user.email,
+            name: event.target.name.value,
+            price: event.target.price.value,
+            quantity: event.target.quantity.value,
+            shippingCost: event.target.shipping.value,
+            img: event.target.image.value,
+        }
 
-        //send data to the server
+        //send data to equipment collection
         fetch('http://localhost:5000/equipment', {
             method: 'POST',
             headers: {
@@ -25,11 +31,22 @@ const AddItem = () => {
                 toast('Equipment succesfully added');
                 event.target.reset();
             })
+
+        //send data to added items collection
+        axios.post('http://localhost:5000/addedItem', newEquipment)
+            .then(response => {
+                const { data } = response;
+            })
+
     }
+
     return (
         <div style={{ width: '30vw' }} className=' mx-auto border border-dark mt-3 px-4 py-3 rounded'>
             <h2 className='text-center my-3'>Please add items</h2>
             <Form onSubmit={handleAddItems} className='form'>
+                <Form.Group className="mb-4" controlId="formBasicEmail">
+                    <Form.Control type="email" value={user?.email} readOnly />
+                </Form.Group>
                 <Form.Group className="mb-4" controlId="formBasicName">
                     <Form.Control type="text" placeholder="equipment name" name='name' required />
                 </Form.Group>
@@ -39,10 +56,10 @@ const AddItem = () => {
                 <Form.Group className="mb-4" controlId="formBasicImage">
                     <Form.Control type="text" placeholder="image" name='image' required />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="formBasicImage">
+                <Form.Group className="mb-4" controlId="formBasicQuantity">
                     <Form.Control type="text" placeholder="quantity" name='quantity' required />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="formBasicImage">
+                <Form.Group className="mb-4" controlId="formBasicShipping">
                     <Form.Control type="text" placeholder="shipping cost" name='shipping' required />
                 </Form.Group>
                 <Button variant="dark w-100 rounded-pill" type="submit">

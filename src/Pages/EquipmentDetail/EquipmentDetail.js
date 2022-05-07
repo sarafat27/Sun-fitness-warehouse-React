@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, CardGroup, Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const EquipmentDetail = () => {
     const { id } = useParams();
@@ -16,7 +17,13 @@ const EquipmentDetail = () => {
             })
     }, []);
 
+
     const handleDelivered = () => {
+        if (quantity === 0) {
+            toast('This product is sold Out');
+            return;
+        }
+
         const newQuantity = quantity - 1;
         const updatedQuantity = { quantity: newQuantity };
         const newDetail = { ...detail, ...updatedQuantity }
@@ -67,8 +74,8 @@ const EquipmentDetail = () => {
             <div className='row w-100'>
                 <div className='col-lg-4 col-md-6 col-sm-10 mt-5 mx-auto'>
                     <CardGroup>
-                        <Card className='shadow-lg mx-3' style={{ height: '600px', borderRadius: '10px' }}>
-                            <Card.Img className='mx-auto shadow-lg' style={{ height: '420px', width: '300px', borderRadius: '10px' }} variant="top" src={img} />
+                        <Card className='shadow-lg mx-3' style={{ height: '600px' }}>
+                            <Card.Img className='mx-auto shadow-lg' style={{ height: '420px', width: '300px' }} variant="top" src={img} />
                             <Card.Body>
                                 <Card.Title>{name}</Card.Title>
                                 <Card.Text>price: {price}</Card.Text>
