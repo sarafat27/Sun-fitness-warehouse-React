@@ -6,7 +6,7 @@ import './supplement.css'
 
 const Supplement = () => {
     return (
-        <div>
+        <div id='recommended'>
             <h2 className='text-center my-5'>Recommended product</h2>
             <div className='d-flex justify-content-center align-items-center protien-container'>
                 <img className='protien-img' src={supplement} alt="" />

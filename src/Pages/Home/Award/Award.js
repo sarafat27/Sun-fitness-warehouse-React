@@ -6,7 +6,7 @@ import bronze from '../../../Images/award/bronze.png'
 import './Award.css'
 const Award = () => {
     return (
-        <div>
+        <div id='award'>
             <h2 className='text-center my-5'>Best contributor award</h2>
             <div className='award-container'>
                 <div className='award-detail'>

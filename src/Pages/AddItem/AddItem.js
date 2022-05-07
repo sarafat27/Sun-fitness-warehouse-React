@@ -30,14 +30,13 @@ const AddItem = () => {
             .then(data => {
                 toast('Equipment succesfully added');
                 event.target.reset();
-            })
+            });
 
         //send data to added items collection
-        axios.post('http://localhost:5000/addedItem', newEquipment)
+        axios.post('http://localhost:5000/addedItems', newEquipment)
             .then(response => {
                 const { data } = response;
             })
-
     }
 
     return (
