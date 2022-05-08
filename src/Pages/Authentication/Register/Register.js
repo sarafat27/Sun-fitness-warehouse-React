@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useToken from '../../../hooks/useToken';
 
 const Register = () => {
     const nameRef = useRef('');
@@ -22,6 +23,8 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+    const [token] = useToken(user)
+
     let errorElement;
     if (error) {
         errorElement = <p className='text-danger'>{error?.message}</p>
@@ -30,7 +33,7 @@ const Register = () => {
     if (loading) {
         return <Loading></Loading>
     }
-    if (user) {
+    if (token) {
         navigate('/home');
         toast('Verification email sent');
     }
