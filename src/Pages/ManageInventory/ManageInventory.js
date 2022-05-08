@@ -11,7 +11,7 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/equipment/${id}`;
+            const url = `https://vast-fjord-33950.herokuapp.com/equipment/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

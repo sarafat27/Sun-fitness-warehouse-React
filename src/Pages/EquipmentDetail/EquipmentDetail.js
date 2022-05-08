@@ -9,7 +9,7 @@ const EquipmentDetail = () => {
     const { name, price, quantity, img, description, supplierName, shippingCost } = detail;
 
     useEffect(() => {
-        const url = `http://localhost:5000/equipment/${id}`
+        const url = `https://vast-fjord-33950.herokuapp.com/equipment/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -30,7 +30,7 @@ const EquipmentDetail = () => {
         setDetail(newDetail);
 
         //send data to server to update
-        const url = `http://localhost:5000/equipment/${id}`
+        const url = `https://vast-fjord-33950.herokuapp.com/equipment/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -54,7 +54,7 @@ const EquipmentDetail = () => {
 
 
         //send data to server to update
-        const url = `http://localhost:5000/equipment/${id}`
+        const url = `https://vast-fjord-33950.herokuapp.com/equipment/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

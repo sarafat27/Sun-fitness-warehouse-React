@@ -19,7 +19,7 @@ const AddItem = () => {
         }
 
         //send data to equipment collection
-        fetch('http://localhost:5000/equipment', {
+        fetch('https://vast-fjord-33950.herokuapp.com/equipment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +33,7 @@ const AddItem = () => {
             });
 
         //send data to added items collection
-        axios.post('http://localhost:5000/addedItems', newEquipment)
+        axios.post('https://vast-fjord-33950.herokuapp.com/addedItems', newEquipment)
             .then(response => {
                 const { data } = response;
             })

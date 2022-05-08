@@ -4,7 +4,7 @@ const useEquipment = () => {
     const [equipments, setEquipments] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/equipment')
+        fetch('https://vast-fjord-33950.herokuapp.com/equipment')
             .then(res => res.json())
             .then(data => setEquipments(data))
     }, []);

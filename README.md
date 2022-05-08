@@ -1,9 +1,9 @@
 # Sun fitness warehouse
 
-My website live link: [Click here](https://github.com/facebook/create-react-app).
+My website live link: [Click here](https://gym-equipment-warehouse.web.app/).
 
 ## Description
-This is an website of warehouse where the details of the equipments will be shown.Any person of warehouse can log  into this website and they can add,delete ,update the items.Without login they can see the home page but cannot update anything.
+This is an website of warehouse where the details of the equipments will be shown.Any person of warehouse can log  into this website and they can add,delete ,update the items.Without login they can see the home page but cannot add items or see there items.
 
 ## Features & functionality
 * There is a navbar in top which indicates the navigation.
