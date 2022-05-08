@@ -8,6 +8,7 @@ import Loading from '../../shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -26,6 +27,7 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(
         auth
     );
+    const [token] = useToken(user)
 
     let errorElement;
     if (error || error2) {
@@ -35,15 +37,15 @@ const Login = () => {
     if (loading || sending) {
         return <Loading></Loading>
     }
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://vast-fjord-33950.herokuapp.com/login', { email });
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
     }
 
     const resetPassword = async () => {
