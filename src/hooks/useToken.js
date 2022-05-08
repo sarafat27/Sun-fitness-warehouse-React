@@ -7,7 +7,7 @@ const useToken = user => {
         const getToken = async () => {
             const email = user?.user?.email;
             if (email) {
-                const { data } = await axios.post('https://serene-beyond-13093.herokuapp.com/login', { email });
+                const { data } = await axios.post('https://vast-fjord-33950.herokuapp.com/login', { email });
                 setToken(data.accessToken)
                 localStorage.setItem('accessToken', data.accessToken);
             }

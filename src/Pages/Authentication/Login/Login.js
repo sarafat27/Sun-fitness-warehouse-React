@@ -7,7 +7,6 @@ import auth from '../../../firebase.init';
 import Loading from '../../shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
 import useToken from '../../../hooks/useToken';
 
 const Login = () => {
