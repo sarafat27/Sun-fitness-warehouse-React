@@ -49,7 +49,12 @@ const MyItems = () => {
                     const rest = items.filter(item => item._id !== id);
                     setItems(rest);
                 })
+            const agree = window.confirm('Do you want to delete this item from manage inventory page also?');
+            if (agree) {
+                navigate('/manageInventory')
+            }
         }
+
     }
 
     return (
